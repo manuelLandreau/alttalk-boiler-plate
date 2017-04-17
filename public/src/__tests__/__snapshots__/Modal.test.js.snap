@@ -1,0 +1,881 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal click test 1`] = `
+<div>
+  <button
+    onClick={[Function]}
+  >
+    -&gt;
+    <span
+      className="hidden--thumb"
+    >
+      Sign in / Sign up
+    </span>
+  </button>
+  <div
+    className="relative"
+  >
+    <div
+      style={
+        Object {
+          "display": "none",
+          "height": "100%",
+          "left": 0,
+          "overflow": "auto",
+          "position": "fixed",
+          "top": 0,
+          "width": "100%",
+          "zIndex": 1,
+        }
+      }
+    >
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "rgba(0,0,0,0.5)",
+            "bottom": 0,
+            "height": "100%",
+            "left": 0,
+            "position": "fixed",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+          }
+        }
+      />
+      <div
+        onClick={[Function]}
+      />
+      <div
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "borderRadius": 3,
+            "boxShadow": "0 20px 30px rgba(0, 0, 0, 0.2)",
+            "boxSizing": "border-box",
+            "margin": "40px auto",
+            "padding": "15px 20px",
+            "position": "relative",
+            "textAlign": "left",
+            "width": 500,
+            "zIndex": 2,
+          }
+        }
+      >
+        <div
+          className="grid--right pb40"
+        >
+          <button
+            onClick={[Function]}
+          >
+            ×
+          </button>
+        </div>
+        <div>
+          <button
+            onClick={[Function]}
+          >
+            Login
+          </button>
+          <button
+            onClick={[Function]}
+          >
+            Register
+          </button>
+        </div>
+        <div
+          className="grid pb40"
+          style={
+            Object {
+              "display": "inherit",
+            }
+          }
+        >
+          <div
+            className="1/2 grid__cell"
+          >
+            <label
+              className="grid__cell"
+              htmlFor="login_username"
+            >
+              Username
+            </label>
+            <label
+              className="grid__cell"
+              htmlFor="login_password"
+            >
+              Password
+            </label>
+          </div>
+          <div
+            className="1/2 grid__cell"
+          >
+            <input
+              className="grid__cell"
+              name="login_username"
+              onChange={[Function]}
+              placeholder="Username"
+              type="text"
+            />
+            <input
+              className="grid__cell"
+              name="login_password"
+              onChange={[Function]}
+              placeholder="Password"
+              type="password"
+            />
+          </div>
+          <div
+            className="grid--right"
+          >
+            <button
+              onClick={[Function]}
+            >
+              Send
+            </button>
+          </div>
+        </div>
+        <div
+          className="grid pb40"
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+        >
+          <div
+            className="1/2 grid__cell"
+          >
+            <label
+              className="grid__cell"
+              htmlFor="register_email"
+            >
+              Email
+            </label>
+            <label
+              className="grid__cell"
+              htmlFor="register_username"
+            >
+              Username
+            </label>
+            <label
+              className="grid__cell"
+              htmlFor="register_password"
+            >
+              Password
+            </label>
+          </div>
+          <div
+            className="1/2 grid__cell"
+          >
+            <input
+              className="grid__cell"
+              name="register_email"
+              onChange={[Function]}
+              placeholder="Email"
+              type="text"
+            />
+            <input
+              className="grid__cell"
+              name="register_username"
+              onChange={[Function]}
+              placeholder="Username"
+              type="text"
+            />
+            <input
+              className="grid__cell"
+              name="register_password"
+              onChange={[Function]}
+              placeholder="Password"
+              type="password"
+            />
+          </div>
+          <div
+            className="grid--right"
+          >
+            <button
+              onClick={[Function]}
+            >
+              Send
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal click test 2`] = `
+<div>
+  <button
+    onClick={[Function]}
+  >
+    -&gt;
+    <span
+      className="hidden--thumb"
+    >
+      Sign in / Sign up
+    </span>
+  </button>
+  <div
+    className="relative"
+  >
+    <div
+      style={
+        Object {
+          "display": "none",
+          "height": "100%",
+          "left": 0,
+          "overflow": "auto",
+          "position": "fixed",
+          "top": 0,
+          "width": "100%",
+          "zIndex": 1,
+        }
+      }
+    >
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "rgba(0,0,0,0.5)",
+            "bottom": 0,
+            "height": "100%",
+            "left": 0,
+            "position": "fixed",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+          }
+        }
+      />
+      <div
+        onClick={[Function]}
+      />
+      <div
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "borderRadius": 3,
+            "boxShadow": "0 20px 30px rgba(0, 0, 0, 0.2)",
+            "boxSizing": "border-box",
+            "margin": "40px auto",
+            "padding": "15px 20px",
+            "position": "relative",
+            "textAlign": "left",
+            "width": 500,
+            "zIndex": 2,
+          }
+        }
+      >
+        <div
+          className="grid--right pb40"
+        >
+          <button
+            onClick={[Function]}
+          >
+            ×
+          </button>
+        </div>
+        <div>
+          <button
+            onClick={[Function]}
+          >
+            Login
+          </button>
+          <button
+            onClick={[Function]}
+          >
+            Register
+          </button>
+        </div>
+        <div
+          className="grid pb40"
+          style={
+            Object {
+              "display": "inherit",
+            }
+          }
+        >
+          <div
+            className="1/2 grid__cell"
+          >
+            <label
+              className="grid__cell"
+              htmlFor="login_username"
+            >
+              Username
+            </label>
+            <label
+              className="grid__cell"
+              htmlFor="login_password"
+            >
+              Password
+            </label>
+          </div>
+          <div
+            className="1/2 grid__cell"
+          >
+            <input
+              className="grid__cell"
+              name="login_username"
+              onChange={[Function]}
+              placeholder="Username"
+              type="text"
+            />
+            <input
+              className="grid__cell"
+              name="login_password"
+              onChange={[Function]}
+              placeholder="Password"
+              type="password"
+            />
+          </div>
+          <div
+            className="grid--right"
+          >
+            <button
+              onClick={[Function]}
+            >
+              Send
+            </button>
+          </div>
+        </div>
+        <div
+          className="grid pb40"
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+        >
+          <div
+            className="1/2 grid__cell"
+          >
+            <label
+              className="grid__cell"
+              htmlFor="register_email"
+            >
+              Email
+            </label>
+            <label
+              className="grid__cell"
+              htmlFor="register_username"
+            >
+              Username
+            </label>
+            <label
+              className="grid__cell"
+              htmlFor="register_password"
+            >
+              Password
+            </label>
+          </div>
+          <div
+            className="1/2 grid__cell"
+          >
+            <input
+              className="grid__cell"
+              name="register_email"
+              onChange={[Function]}
+              placeholder="Email"
+              type="text"
+            />
+            <input
+              className="grid__cell"
+              name="register_username"
+              onChange={[Function]}
+              placeholder="Username"
+              type="text"
+            />
+            <input
+              className="grid__cell"
+              name="register_password"
+              onChange={[Function]}
+              placeholder="Password"
+              type="password"
+            />
+          </div>
+          <div
+            className="grid--right"
+          >
+            <button
+              onClick={[Function]}
+            >
+              Send
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal click test 3`] = `
+<div>
+  <button
+    onClick={[Function]}
+  >
+    -&gt;
+    <span
+      className="hidden--thumb"
+    >
+      Sign in / Sign up
+    </span>
+  </button>
+  <div
+    className="relative"
+  >
+    <div
+      style={
+        Object {
+          "display": "none",
+          "height": "100%",
+          "left": 0,
+          "overflow": "auto",
+          "position": "fixed",
+          "top": 0,
+          "width": "100%",
+          "zIndex": 1,
+        }
+      }
+    >
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "rgba(0,0,0,0.5)",
+            "bottom": 0,
+            "height": "100%",
+            "left": 0,
+            "position": "fixed",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+          }
+        }
+      />
+      <div
+        onClick={[Function]}
+      />
+      <div
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "borderRadius": 3,
+            "boxShadow": "0 20px 30px rgba(0, 0, 0, 0.2)",
+            "boxSizing": "border-box",
+            "margin": "40px auto",
+            "padding": "15px 20px",
+            "position": "relative",
+            "textAlign": "left",
+            "width": 500,
+            "zIndex": 2,
+          }
+        }
+      >
+        <div
+          className="grid--right pb40"
+        >
+          <button
+            onClick={[Function]}
+          >
+            ×
+          </button>
+        </div>
+        <div>
+          <button
+            onClick={[Function]}
+          >
+            Login
+          </button>
+          <button
+            onClick={[Function]}
+          >
+            Register
+          </button>
+        </div>
+        <div
+          className="grid pb40"
+          style={
+            Object {
+              "display": "inherit",
+            }
+          }
+        >
+          <div
+            className="1/2 grid__cell"
+          >
+            <label
+              className="grid__cell"
+              htmlFor="login_username"
+            >
+              Username
+            </label>
+            <label
+              className="grid__cell"
+              htmlFor="login_password"
+            >
+              Password
+            </label>
+          </div>
+          <div
+            className="1/2 grid__cell"
+          >
+            <input
+              className="grid__cell"
+              name="login_username"
+              onChange={[Function]}
+              placeholder="Username"
+              type="text"
+            />
+            <input
+              className="grid__cell"
+              name="login_password"
+              onChange={[Function]}
+              placeholder="Password"
+              type="password"
+            />
+          </div>
+          <div
+            className="grid--right"
+          >
+            <button
+              onClick={[Function]}
+            >
+              Send
+            </button>
+          </div>
+        </div>
+        <div
+          className="grid pb40"
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+        >
+          <div
+            className="1/2 grid__cell"
+          >
+            <label
+              className="grid__cell"
+              htmlFor="register_email"
+            >
+              Email
+            </label>
+            <label
+              className="grid__cell"
+              htmlFor="register_username"
+            >
+              Username
+            </label>
+            <label
+              className="grid__cell"
+              htmlFor="register_password"
+            >
+              Password
+            </label>
+          </div>
+          <div
+            className="1/2 grid__cell"
+          >
+            <input
+              className="grid__cell"
+              name="register_email"
+              onChange={[Function]}
+              placeholder="Email"
+              type="text"
+            />
+            <input
+              className="grid__cell"
+              name="register_username"
+              onChange={[Function]}
+              placeholder="Username"
+              type="text"
+            />
+            <input
+              className="grid__cell"
+              name="register_password"
+              onChange={[Function]}
+              placeholder="Password"
+              type="password"
+            />
+          </div>
+          <div
+            className="grid--right"
+          >
+            <button
+              onClick={[Function]}
+            >
+              Send
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal simple Snapshot test 1`] = `
+<div
+  style={
+    Object {
+      "display": "none",
+      "height": "100%",
+      "left": 0,
+      "overflow": "auto",
+      "position": "fixed",
+      "top": 0,
+      "width": "100%",
+      "zIndex": 1,
+    }
+  }
+>
+  <div
+    onClick={[Function]}
+    style={
+      Object {
+        "backgroundColor": "rgba(0,0,0,0.5)",
+        "bottom": 0,
+        "height": "100%",
+        "left": 0,
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+        "width": "100%",
+      }
+    }
+  />
+  <div
+    onClick={[Function]}
+  />
+  <div
+    style={
+      Object {
+        "backgroundColor": "#fff",
+        "borderRadius": 3,
+        "boxShadow": "0 20px 30px rgba(0, 0, 0, 0.2)",
+        "boxSizing": "border-box",
+        "margin": "40px auto",
+        "padding": "15px 20px",
+        "position": "relative",
+        "textAlign": "left",
+        "width": 500,
+        "zIndex": 2,
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Registration test 1`] = `
+<div>
+  <button
+    onClick={[Function]}
+  >
+    -&gt;
+    <span
+      className="hidden--thumb"
+    >
+      Sign in / Sign up
+    </span>
+  </button>
+  <div
+    className="relative"
+  >
+    <div
+      style={
+        Object {
+          "display": "none",
+          "height": "100%",
+          "left": 0,
+          "overflow": "auto",
+          "position": "fixed",
+          "top": 0,
+          "width": "100%",
+          "zIndex": 1,
+        }
+      }
+    >
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "rgba(0,0,0,0.5)",
+            "bottom": 0,
+            "height": "100%",
+            "left": 0,
+            "position": "fixed",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+          }
+        }
+      />
+      <div
+        onClick={[Function]}
+      />
+      <div
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "borderRadius": 3,
+            "boxShadow": "0 20px 30px rgba(0, 0, 0, 0.2)",
+            "boxSizing": "border-box",
+            "margin": "40px auto",
+            "padding": "15px 20px",
+            "position": "relative",
+            "textAlign": "left",
+            "width": 500,
+            "zIndex": 2,
+          }
+        }
+      >
+        <div
+          className="grid--right pb40"
+        >
+          <button
+            onClick={[Function]}
+          >
+            ×
+          </button>
+        </div>
+        <div>
+          <button
+            onClick={[Function]}
+          >
+            Login
+          </button>
+          <button
+            onClick={[Function]}
+          >
+            Register
+          </button>
+        </div>
+        <div
+          className="grid pb40"
+          style={
+            Object {
+              "display": "inherit",
+            }
+          }
+        >
+          <div
+            className="1/2 grid__cell"
+          >
+            <label
+              className="grid__cell"
+              htmlFor="login_username"
+            >
+              Username
+            </label>
+            <label
+              className="grid__cell"
+              htmlFor="login_password"
+            >
+              Password
+            </label>
+          </div>
+          <div
+            className="1/2 grid__cell"
+          >
+            <input
+              className="grid__cell"
+              name="login_username"
+              onChange={[Function]}
+              placeholder="Username"
+              type="text"
+            />
+            <input
+              className="grid__cell"
+              name="login_password"
+              onChange={[Function]}
+              placeholder="Password"
+              type="password"
+            />
+          </div>
+          <div
+            className="grid--right"
+          >
+            <button
+              onClick={[Function]}
+            >
+              Send
+            </button>
+          </div>
+        </div>
+        <div
+          className="grid pb40"
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+        >
+          <div
+            className="1/2 grid__cell"
+          >
+            <label
+              className="grid__cell"
+              htmlFor="register_email"
+            >
+              Email
+            </label>
+            <label
+              className="grid__cell"
+              htmlFor="register_username"
+            >
+              Username
+            </label>
+            <label
+              className="grid__cell"
+              htmlFor="register_password"
+            >
+              Password
+            </label>
+          </div>
+          <div
+            className="1/2 grid__cell"
+          >
+            <input
+              className="grid__cell"
+              name="register_email"
+              onChange={[Function]}
+              placeholder="Email"
+              type="text"
+            />
+            <input
+              className="grid__cell"
+              name="register_username"
+              onChange={[Function]}
+              placeholder="Username"
+              type="text"
+            />
+            <input
+              className="grid__cell"
+              name="register_password"
+              onChange={[Function]}
+              placeholder="Password"
+              type="password"
+            />
+          </div>
+          <div
+            className="grid--right"
+          >
+            <button
+              onClick={[Function]}
+            >
+              Send
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
