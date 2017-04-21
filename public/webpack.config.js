@@ -50,4 +50,5 @@ module.exports = {
         }),
             new FlowBabelWebpackPlugin()
     ],
+    watchOptions: { poll: true }
 };

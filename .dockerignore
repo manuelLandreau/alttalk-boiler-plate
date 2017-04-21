@@ -1,0 +1,6 @@
+*.log
+src
+public
+yarn.lock
+Dockerfile
+*.md

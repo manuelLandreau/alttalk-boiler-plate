@@ -21,6 +21,7 @@
     "redux-logger": "^2.8.1",
     "redux-promise-middleware": "^4.2.0",
     "redux-thunk": "^2.2.0",
+    "sass-loader": "^5.0.1",
     "url-loader": "^0.5.8"
   },
   "devDependencies": {
@@ -42,7 +43,7 @@
     "flow-bin": "^0.41.0",
     "jest": "^19.0.2",
     "jsdom": "^9.11.0",
-    "node-sass": "^4.5.0",
+    "node-sass": "4.0.0",
     "prettier": "^0.22.0",
     "react-addons-test-utils": "^15.4.2",
     "react-test-renderer": "^15.4.2",
@@ -57,7 +58,8 @@
     "flow": "flow; test $? -eq 0 -o $? -eq 2",
     "prettify": "prettier --single-quote --trailing-comma all src/js/**/*.js",
     "test": "jest",
-    "start": "webpack-dev-server --content-base src --inline --hot --historyApiFallback=true"
+    "start": "webpack-dev-server --content-base src --inline --hot --historyApiFallback=true",
+    "docker": "mkdir -p node_modules/node-sass/vendor/linux-x64-51 && curl -L https://github.com/sass/node-sass/releases/download/v4.5.0/linux-x64-51_binding.node -o node_modules/node-sass/vendor/linux-x64-51/binding.node && webpack-dev-server --content-base src --inline --hot --historyApiFallback=true"
   },
   "author": "Manuel Landreau",
   "license": "ISC"
