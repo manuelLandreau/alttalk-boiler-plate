@@ -9,10 +9,6 @@ class LoginForm extends React.Component {
         super(props);
     }
 
-    static shouldComponentUpdate(nextProps, nextState){
-        return nextProps !== nextState;
-    }
-
     render() {
         const { message, handleSubmit } = this.props;
 

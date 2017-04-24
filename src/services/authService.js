@@ -3,25 +3,32 @@ import User from '../models/user';
 
 const saltRounds = 10;
 
-export function createUser(user) {
+export function createUser(user, success, error) {
     console.log('Check if user exists');
     console.log(user);
-    return getUserByMailAndName(user.email, user.username).then((data) => {
-        if (data === null) {
-            return bcrypt.hash(user.password, 10, (err, hash) => {
-                if (!err)
-                    return User.create({email: user.email, username: user.username, password: hash})
-                        .then((data) => {
-                            console.log('Persist user');
-                            return data.dataValues;
-                        })
-                        .catch(error => console.log("ERROR:", error.message || error));
-                console.log("Bcrypt error:", err);
-            });
-        } else {
-            console.log('User allready exists');
-        }
-    })
+    return new Promise((resolve, reject) => {
+        getUserByMailAndName(user.email, user.username).then((data) => {
+            if (data === null) {
+                return bcrypt.hash(user.password, 10, (err, hash) => {
+                    if (!err)
+                        return User.create({email: user.email, username: user.username, password: hash})
+                            .then((data) => {
+                                console.log('Persist user');
+                                resolve();
+                            })
+                            .catch(error => {
+                                console.log("ERROR:", error.message || error);
+                                reject();
+                            });
+                    console.log("Bcrypt error:", err);
+                    reject();
+                });
+            } else {
+                console.log('User allready exists');
+                reject();
+            }
+        })
+    });
 }
 
 export function checkPassword(username, password) {

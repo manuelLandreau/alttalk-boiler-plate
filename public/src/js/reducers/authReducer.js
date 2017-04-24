@@ -5,7 +5,7 @@ export default function reducer(state = {
 }, action) {
     switch (action.type) {
         case 'AUTH_PROCESSING': {
-            return {...state, fetching: true}
+            return {...state, authorizing: true}
         }
         case 'AUTH_FAILED': {
             return {
@@ -18,7 +18,8 @@ export default function reducer(state = {
             return {
                 ...state,
                 authorizing: false,
-                authorized: true
+                authorized: true,
+                error: { message: null }
             }
         }
         case 'LOGOUT': {

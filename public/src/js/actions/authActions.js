@@ -12,21 +12,21 @@ import jwt from '../common/jwt';
  * @param password
  * @returns {Function}
  */
-export function login(username:string, password:string):Function {
-    return (dispatch:Function):void => {
+export function login(username, password) {
+    return (dispatch) => {
         dispatch({type: 'AUTH_PROCESSING'});
         Axios.post(SERVER_URL + 'auth/login', {'username': username, 'password': password})
-            .then((response:Object) => {
+            .then((response) => {
                 localStorage.setItem('jwt', response.data);
-                dispatch({type: 'AUTH_SUCCESS'});
                 fetchUser()
                     .then((userDispatch) => {
                         dispatch(userDispatch);
                         dispatch(fetchRatio());
                         dispatch(closeModal())
                     }).catch((errDispatch) => dispatch(errDispatch));
+                dispatch({type: 'AUTH_SUCCESS'});
             })
-            .catch((err:Object) => {
+            .catch((err) => {
                 dispatch({type: 'AUTH_FAILED', payload: err})
             });
     }
@@ -39,11 +39,11 @@ export function login(username:string, password:string):Function {
  * @param password
  * @returns {Function}
  */
-export function register(email:string, username:string, password:string):Function {
-    return (dispatch:Function):void => {
+export function register(email, username, password) {
+    return (dispatch) => {
         Axios.post(SERVER_URL + 'auth/register', {'email': email, 'username': username, 'password': password})
-            .then(():void => login(username, password))
-            .catch((err:Object):void => {
+            .then(() => dispatch(login(username, password)))
+            .catch((err) => {
                 dispatch({type: 'AUTH_FAILED', payload: err})
             });
     }
@@ -53,7 +53,7 @@ export function register(email:string, username:string, password:string):Functio
  *
  * @returns {Function}
  */
-export function logout(dispatch:Function):void {
+export function logout(dispatch) {
     localStorage.removeItem('jwt');
     dispatch({type: 'LOGOUT'});
     dispatch({type: 'REMOVE_USER'});
@@ -64,7 +64,7 @@ export function logout(dispatch:Function):void {
  *
  * @returns {{type: string, payload: null}}
  */
-export function clearErrors():Object {
+export function clearErrors() {
     return {
         type: 'CLEAR_AUTH_ERROR',
         payload: null

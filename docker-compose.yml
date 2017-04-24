@@ -1,5 +1,5 @@
 server:
-  image: node:7
+  image: node:6
   #build: .
   command: sh -c 'npm install && npm install -g nodemon && nodemon src/app.js --exec ./node_modules/.bin/babel-node'
   working_dir: /home/app
@@ -9,11 +9,9 @@ server:
   #  PORT: 3001
   ports:
     - "3001:3001"
-  links:
-    - db
 
 frontend:
-  image: node:7
+  image: node:6
   #build: ./public
   command: sh -c 'npm install && npm install -g webpack-dev-server && webpack-dev-server --content-base src --inline --hot --historyApiFallback=true --host 0.0.0.0'
   working_dir: /home/app
@@ -28,4 +26,4 @@ db:
         MYSQL_ROOT_PASSWORD: root
         MYSQL_DATABASE: alttalk
   ports:
-      - "3306:3306"
+      - "127.0.0.1:3306:3306"

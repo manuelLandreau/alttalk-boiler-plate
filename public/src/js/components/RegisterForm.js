@@ -13,7 +13,7 @@ class RegisterForm extends React.Component {
         const { message, handleSubmit } = this.props;
 
         return (
-            <form onSubmit={handleSubmit}>
+            <form class="pam" onSubmit={handleSubmit}>
                 <div class="mbs">
                     <Field name="email"
                            component={renderField}

@@ -52,13 +52,12 @@ export default class LoginBox extends React.Component {
     }
 
     render() {
-
         const {isOpen, tabSwitch, error} = this.props;
 
         return (
             <div>
                 <button class="btn" onClick={this.handleOpenModal.bind(this)}>
-                    <UserIcon width="16" height="16"/>
+                    <UserIcon width="16" height="16" />
                     <span class="tiny-hidden"> Sign in / Sign up</span>
                 </button>
                 <div>

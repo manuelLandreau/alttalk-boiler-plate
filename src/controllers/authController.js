@@ -15,9 +15,8 @@ auth.post('/login',
 
 auth.post('/register', (req, res) => {
     console.log(req.body);
-        createUser(req.body);
-        res.send('Registration ok');
-    }
-);
+    // TODO: better error handling
+    createUser(req.body).then(() => res.send('Registration ok')).catch(() => console.log('Registration error'));
+});
 
 export default auth;
