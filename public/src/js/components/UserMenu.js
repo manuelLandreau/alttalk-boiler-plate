@@ -17,7 +17,7 @@ export default class UserMenu extends React.Component {
                     <button class="dropdown_button txtleft" onClick={dropMenu}>{username} <CaretIcon width="8" height="8"/></button>
                     <ul class="dropdown" style={{display : isDropped ? 'block' : 'none'}}>
                         <li>Parameters</li>
-                        <li><a href="#" onClick={logout}>Logout</a></li>
+                        <a href="#" onClick={logout}><li>Logout</li></a>
                     </ul>
                 </div>
             </div>

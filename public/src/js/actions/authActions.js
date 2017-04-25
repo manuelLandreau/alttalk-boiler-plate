@@ -4,7 +4,6 @@ import {closeModal} from './uiActions';
 import {fetchUser} from './userActions';
 import {fetchRatio} from '../actions/ratioActions';
 import {SERVER_URL} from '../globals';
-import jwt from '../common/jwt';
 
 /**
  *
@@ -18,6 +17,7 @@ export function login(username, password) {
         Axios.post(SERVER_URL + 'auth/login', {'username': username, 'password': password})
             .then((response) => {
                 localStorage.setItem('jwt', response.data);
+                Axios.defaults.headers.common['Authorization'] = response.data;
                 fetchUser()
                     .then((userDispatch) => {
                         dispatch(userDispatch);
@@ -55,6 +55,7 @@ export function register(email, username, password) {
  */
 export function logout(dispatch) {
     localStorage.removeItem('jwt');
+    Axios.defaults.headers.common['Authorization'] = null;
     dispatch({type: 'LOGOUT'});
     dispatch({type: 'REMOVE_USER'});
     dispatch({type: 'DROP_USER_MENU'});

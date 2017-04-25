@@ -18,7 +18,7 @@ user.get('/me/ratio', jwtMiddleware,
             .then(user => {
                 const ratio = user.talkNb / 100 * user.answerNb;
                 res.json(ratio);
-            }).catch(err => res.statusCode(500));
+            }).catch(err => res.status(500));
     }
 );
 
