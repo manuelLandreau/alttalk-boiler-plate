@@ -1,57 +1,43 @@
 # altTALK
 
-### Toy project
+## Toy project
 
 
-## Packages
+# Packages
 
 front app:
 
 React
-
 Redux
-
 Redux-form
-
 Webpack
-
 Sass
-
 Flow
-
 Prettier
-
 Knacss
-
 Jest
 
 Back-end API:
 
 Express
-
 Sequelize
-
 Flow
-
 
 Work in progress !!!!
 
 Authorization URIs:
 
 POST /auth/login
-
 POST /auth/register
-
+...
 
 User URIs:
 
 GET /users/me
-
 ...
 
 
 Talks/Answers URIs
-
 ...
 
 
