@@ -1,43 +1,43 @@
-# altTALK
+# altTALK - Toy project
 
-## Toy project
+### Packages
 
+**Front app:**
+* React
+* Redux
+* Redux-form
+* Webpack
+* Sass
+* Flow
+* Prettier
+* Knacss
+* Jest
+* ...
 
-# Packages
+**Back-end API:**
+* Express
+* Sequelize
+* Flow
+* ...
 
-front app:
-
-React
-Redux
-Redux-form
-Webpack
-Sass
-Flow
-Prettier
-Knacss
-Jest
-
-Back-end API:
-
-Express
-Sequelize
-Flow
-
-Work in progress !!!!
+###Work in progress !!!!
 
 Authorization URIs:
 
-POST /auth/login
-POST /auth/register
+POST `/auth/login`
+
+POST `/auth/register`
+
 ...
 
-User URIs:
+**User URIs:**
 
-GET /users/me
+GET `/users/me`
+
 ...
-
 
 Talks/Answers URIs
+
 ...
 
 
@@ -45,20 +45,20 @@ Talks/Answers URIs
 
 ### With yarn :
 
-(back) yarn && yarn start
+_(back)_ `yarn && yarn start`
 
-(front) cd public && yarn && yarn start
+_(front)_ `cd public && yarn && yarn start`
 
 
 ### With npm :
 
-(back) npm install && npm start
+_(back)_ `npm install && npm start`
 
-(front) cd public && npm install && npm start
+_(front)_ `cd public && npm install && npm start`
 
 
 ### With docker :
 
-docker-compose up
+`docker-compose up`
 
 
