@@ -4,13 +4,11 @@ import LoginBox from './LoginBox';
 import UserMenu from '../components/UserMenu';
 import PlusIcon from '../icons/PlusIcon';
 import {logout} from '../actions/authActions';
-import Ratio from '../components/Ratio';
 import {Link} from 'react-router-dom';
 
 @connect((store) => {
     return {
         username: store.user.user.username,
-        ratio: store.ratio.ratio,
         isUserMenuDropped: store.ui.isUserMenuDropped
     };
 })
@@ -21,7 +19,7 @@ export default class Navbar extends React.Component {
     }
 
     render() {
-        const {username, ratio, isUserMenuDropped, dispatch} = this.props;
+        const {username, isUserMenuDropped, dispatch} = this.props;
 
         return (
             <header class="pas">
@@ -32,14 +30,11 @@ export default class Navbar extends React.Component {
                 </div>
                 <span class="fr">
                     {username ?
-                        <span>
-                            <Ratio ratio={ratio}/>
-                            <UserMenu username={username}
-                                      isDropped={isUserMenuDropped}
-                                      dropMenu={() => dispatch({type: 'DROP_USER_MENU'})}
-                                      logout={() => dispatch(logout)}
-                            />
-                        </span>:
+                        <UserMenu username={username}
+                                  isDropped={isUserMenuDropped}
+                                  dropMenu={() => dispatch({type: 'DROP_USER_MENU'})}
+                                  logout={() => dispatch(logout)}
+                        />:
                         <LoginBox/>}
                 </span>
                 <Link to="/add">

@@ -29,14 +29,16 @@ export function create(data) {
  * Find the best match for a Talk to answer (cf. Specs)
  * @return Promise<Talk>
  */
-export function findTheBest() {
+export function findAll() {
     return new Promise((resolve, reject) => {
-        resolve(Talk.find({
-            order: [
-                sequelize.fn('min', sequelize.col('answerNb')),
-                sequelize.fn('max', sequelize.col('ratio'))
-            ]
-        }));
+        Talk.findAll({
+            //attributes: [ sequelize.fn('max', sequelize.col('ratio')) ],
+            include: [{
+                model: User
+            }]
+        }).then((talks) => {
+            resolve(talks);
+        });
     });
 }
 

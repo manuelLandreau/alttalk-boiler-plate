@@ -38,6 +38,8 @@ GET `/users/me`
 
 Talks/Answers URIs
 
+GET `/talks/all`
+
 ...
 
 
@@ -60,5 +62,9 @@ _(front)_ `cd public && npm install && npm start`
 ### With docker :
 
 `docker-compose up`
+
+Then go to: http://localhost:8080
+
+if not installed with docker, change the mysql ip to your own sql server
 
 

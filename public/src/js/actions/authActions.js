@@ -2,7 +2,6 @@
 import Axios from 'axios';
 import {closeModal} from './uiActions';
 import {fetchUser} from './userActions';
-import {fetchRatio} from '../actions/ratioActions';
 import {SERVER_URL} from '../globals';
 
 /**
@@ -21,7 +20,6 @@ export function login(username, password) {
                 fetchUser()
                     .then((userDispatch) => {
                         dispatch(userDispatch);
-                        dispatch(fetchRatio());
                         dispatch(closeModal())
                     }).catch((errDispatch) => dispatch(errDispatch));
                 dispatch({type: 'AUTH_SUCCESS'});

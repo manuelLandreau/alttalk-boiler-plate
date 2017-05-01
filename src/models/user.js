@@ -28,7 +28,12 @@ let User = sequelize.define('user', {
     talkNb: {
         type: Sequelize.INTEGER,
         defaultValue: 1
+    },
+    ratio: {
+        type: Sequelize.INTEGER,
+        defaultValue: 1
     }
+
 });
 
 // Relations

@@ -2,7 +2,6 @@ import React from 'react';
 import {connect} from 'react-redux'
 import Navbar from '../containers/Navbar';
 import {fetchUser} from '../actions/userActions';
-import {fetchRatio} from '../actions/ratioActions';
 
 @connect((store) => {
     return {
@@ -20,7 +19,6 @@ export default class Layout extends React.Component {
     componentWillMount() {
         fetchUser().then(userDispatch => {
             this.props.dispatch(userDispatch);
-            this.props.dispatch(fetchRatio());
         });
     }
 

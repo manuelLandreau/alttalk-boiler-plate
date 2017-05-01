@@ -1,21 +1,21 @@
 // @flow
 import axios from 'axios';
-import {fetchRatio} from './ratioActions'
+import {reset} from 'redux-form';
 import {SERVER_URL} from '../globals';
 
 /**
  *
  * @returns {Function}
  */
-export function fetchTalk():Function {
-    return (dispatch:Function) => {
-        dispatch({type: 'FETCHING_TALK'});
-        axios.get(SERVER_URL + 'talks/best')
-            .then((response:Object):void => {
-                dispatch({type: 'FETCH_TALK_FULFILLED', payload: response.data})
+export function fetchTalks() {
+    return (dispatch) => {
+        dispatch({type: 'FETCHING_TALKS'});
+        axios.get(SERVER_URL + 'talks/all')
+            .then((response) => {
+                dispatch({type: 'FETCH_TALKS_FULFILLED', payload: response.data})
             })
-            .catch((err:Object):void => {
-                dispatch({type: 'FETCH_TALK_REJECTED', payload: err})
+            .catch((err) => {
+                dispatch({type: 'FETCH_TALKS_REJECTED', payload: err})
             })
     }
 }
@@ -25,7 +25,7 @@ export function fetchTalk():Function {
  * @param talk
  * @returns {{type: string, payload: *}}
  */
-export function getTalk(talk:string):Object {
+export function getTalk(talk) {
     return {
         type: 'FETCH_TALK_FULFILLED',
         payload: talk
@@ -35,16 +35,14 @@ export function getTalk(talk:string):Object {
 /**
  *
  * @param userId
- * @param text
+ * @param talk
  * @returns {Function}
  */
-export function addTalk(userId:string, text:string):Function {
-    return (dispatch:Function):void => {
-        axios.post(SERVER_URL + 'talks/add', {userId, talk: text})
-            .then(():void => {
-                dispatch(fetchRatio())
-            })
-            .catch((err:Object):void => {
+export function addTalk(userId, talk) {
+    return (dispatch) => {
+        axios.post(SERVER_URL + 'talks/add', {userId, talk})
+            .then(() => dispatch(reset('newtalk')))
+            .catch((err) => {
                 dispatch({type: 'ADD_TALK_REJECTED', payload: err})
             })
     }
@@ -56,7 +54,7 @@ export function addTalk(userId:string, text:string):Function {
  * @param text
  * @returns {{type: string, payload: {id: string, text: string}}}
  */
-export function replyTalk(id:string, text:string):Object {
+export function replyTalk(id, text) {
     return {
         type: 'REPLY_TALK',
         payload: {

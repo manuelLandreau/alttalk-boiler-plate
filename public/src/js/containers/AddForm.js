@@ -2,10 +2,13 @@ import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import {addTalk} from '../actions/talksActions';
 import {connect} from 'react-redux';
+import validate from '../validation/talkValidation';
+import renderFieldTextarea from '../common/renderFieldTextarea';
 
 @connect(store => {
     return {
-        user: store.user.user
+        user: store.user.user,
+        userFetched: store.user.fetched
     }
 })
 class AddForm extends React.Component {
@@ -16,7 +19,11 @@ class AddForm extends React.Component {
 
     handleSubmit = (form) => {
         form.preventDefault();
-        this.props.dispatch(addTalk(this.props.user._id, form.target.new_talk.value));
+        if (this.props.userFetched) {
+            this.props.dispatch(addTalk(this.props.user._id, form.target.new_talk.value));
+        } else {
+            this.props.dispatch({type: 'OPEN_MODAL'});
+        }
     };
 
     render() {
@@ -24,10 +31,12 @@ class AddForm extends React.Component {
             <form onSubmit={this.handleSubmit.bind(this)}>
                 <div class="mbs">
                     <Field name="new_talk"
-                           component="textarea"
+                           component={renderFieldTextarea}
                            type="textarea"
-                           class="w100"
+                           parentClass="w100"
+                           elemClass="w100"
                            placeholder="Write something&hellip;"
+                           label=""
                     />
                 </div>
                 <button class="fr btn_green">Send</button>
@@ -39,8 +48,8 @@ class AddForm extends React.Component {
 
 // Decorate the form component
 AddForm = reduxForm({
-    form: 'newtalk' // a unique name for this form
-    //validate
+    form: 'newtalk', // a unique name for this form
+    validate
 })(AddForm);
 
 export default AddForm;

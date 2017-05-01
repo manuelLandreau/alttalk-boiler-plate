@@ -1,7 +1,7 @@
 import express from 'express';
 import jwtMiddleware from '../middlewares/jwtMiddleware';
 import {create} from '../models/talkDao';
-import {findTheBest} from '../models/talkDao';
+import {findAll} from '../models/talkDao';
 
 let talk = express();
 
@@ -13,10 +13,10 @@ talk.post('/add', jwtMiddleware,
     }
 );
 
-talk.get('/best',
+talk.get('/all',
     (req, res) => {
-        findTheBest()
-            .then(talk => res.json(talk))
+        findAll()
+            .then(talks => res.json(talks))
             .catch(err => console.log(err));
     }
 );
